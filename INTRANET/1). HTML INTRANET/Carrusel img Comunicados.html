@@ -43,60 +43,61 @@
 </div>
 
 <script>
-    const usuario = "AnalistaTIServialco";
-    const repo = "Imagenes-web";
-    const urlAPI = `https://api.github.com/repos/${usuario}/${repo}/contents/`;
-    const slidesContainer = document.getElementById("slides");
+const usuario = "AnalistaTIServialco";
+const repo = "Intranet-Servialco";
 
-    let index = 0;
-    let totalImages = 0;
+const ruta = "INTRANET/3.) SEGURIDAD DE LA INFORMACION - COMUNICADOS";
+const rutaAPI = ruta.split("/").map(encodeURIComponent).join("/");
 
-    async function inicializarCarrusel() {
-        try {
-            // 1. Consultar la lista de archivos en el repositorio
-            const respuesta = await fetch(urlAPI);
-            const archivos = await respuesta.json();
+const urlAPI = `https://api.github.com/repos/${usuario}/${repo}/contents/${rutaAPI}`;
 
-            // 2. Filtrar solo las imágenes y agregarlas al HTML
-            const imagenesFiltradas = archivos.filter(archivo => 
-                archivo.name.match(/\.(jpe?sg|png|gif|webp)$/i)
-            );
+const slidesContainer = document.getElementById("slides");
 
-            totalImages = imagenesFiltradas.length;
+let index = 0;
+let totalImages = 0;
 
-            if (totalImages === 0) {
-                console.error("No se encontraron imágenes en la carpeta.");
-                return;
-            }
+async function inicializarCarrusel() {
+    try {
+        const respuesta = await fetch(urlAPI);
+        const archivos = await respuesta.json();
 
-            imagenesFiltradas.forEach(archivo => {
-                const img = document.createElement("img");
-                // Usamos download_url que es el enlace raw directo
-                img.src = archivo.download_url; 
-                img.alt = archivo.name;
-                slidesContainer.appendChild(img);
-            });
+        console.log("Archivos:", archivos);
 
-            // 3. Iniciar la animación solo después de cargar las imágenes
-            iniciarAnimacion();
+        const imagenes = archivos.filter(a =>
+            a.name.match(/\.(jpg|jpeg|png|gif|webp)$/i)
+        );
 
-        } catch (error) {
-            console.error("Error al cargar las imágenes de GitHub:", error);
+        totalImages = imagenes.length;
+
+        if (!totalImages) {
+            console.error("No hay imágenes en la carpeta");
+            return;
         }
+
+        imagenes.forEach(a => {
+            const img = document.createElement("img");
+            img.src = a.download_url;
+            slidesContainer.appendChild(img);
+        });
+
+        iniciarAnimacion();
+
+    } catch (e) {
+        console.error("Error:", e);
     }
+}
 
+function iniciarAnimacion() {
+    setInterval(() => {
+        index = (index + 1) % totalImages;
+        slidesContainer.style.transform =
+            `translateX(-${index * 100}%)`;
+    }, 4000);
+}
 
-
-    function iniciarAnimacion() {
-        setInterval(() => {
-            index = (index + 1) % totalImages;
-            slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-        }, 4000); 
-    }
-
-    // Ejecutar la carga al abrir la página
-    inicializarCarrusel();
+inicializarCarrusel();
 </script>
+
 
 </body>
 </html>
