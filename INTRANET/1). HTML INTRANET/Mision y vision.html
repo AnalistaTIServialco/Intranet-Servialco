@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Layout Imágenes</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7f9;
+  margin: 40px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+}
+
+.img-grande {
+  height: 520px;
+}
+
+.img-columna {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 520px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="galeria">
+
+  <!-- Imagen grande izquierda -->
+  <div class="img-grande">
+    <img src="C:\Users\Jfino\Desktop\Logos Intranet\Mision y vision.png" alt="Imagen principal">
+  </div>
+
+  <!-- Columna derecha -->
+  <div class="img-columna">
+    <img src="C:\Users\Jfino\Desktop\Logos Intranet\Mision.png" alt="Imagen 2">
+    <img src="C:\Users\Jfino\Desktop\Logos Intranet\Vision.png" alt="Imagen 3">
+  </div>
+
+</div>
+
+</body>
+</html>

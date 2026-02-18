@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrusel Banner Automático</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+    }
+
+    .slider {
+        width: 900px;      
+        height: 550px;     
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        margin: auto;
+        background: transparent; /* Fondo negro por si la imagen es pequeña */
+    }
+
+    .slides {
+        display: flex;
+        height: 100%;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+        flex-shrink: 0;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="slider">
+    <div class="slides" id="slides"></div>
+</div>
+
+<script>
+    const usuario = "AnalistaTIServialco";
+    const repo = "Imagenes-web";
+    const urlAPI = `https://api.github.com/repos/${usuario}/${repo}/contents/`;
+    const slidesContainer = document.getElementById("slides");
+
+    let index = 0;
+    let totalImages = 0;
+
+    async function inicializarCarrusel() {
+        try {
+            // 1. Consultar la lista de archivos en el repositorio
+            const respuesta = await fetch(urlAPI);
+            const archivos = await respuesta.json();
+
+            // 2. Filtrar solo las imágenes y agregarlas al HTML
+            const imagenesFiltradas = archivos.filter(archivo => 
+                archivo.name.match(/\.(jpe?sg|png|gif|webp)$/i)
+            );
+
+            totalImages = imagenesFiltradas.length;
+
+            if (totalImages === 0) {
+                console.error("No se encontraron imágenes en la carpeta.");
+                return;
+            }
+
+            imagenesFiltradas.forEach(archivo => {
+                const img = document.createElement("img");
+                // Usamos download_url que es el enlace raw directo
+                img.src = archivo.download_url; 
+                img.alt = archivo.name;
+                slidesContainer.appendChild(img);
+            });
+
+            // 3. Iniciar la animación solo después de cargar las imágenes
+            iniciarAnimacion();
+
+        } catch (error) {
+            console.error("Error al cargar las imágenes de GitHub:", error);
+        }
+    }
+
+
+
+    function iniciarAnimacion() {
+        setInterval(() => {
+            index = (index + 1) % totalImages;
+            slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+        }, 4000); 
+    }
+
+    // Ejecutar la carga al abrir la página
+    inicializarCarrusel();
+</script>
+
+</body>
+</html>
+
+
+
