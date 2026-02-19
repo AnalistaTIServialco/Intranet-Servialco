@@ -5,47 +5,59 @@
 <title>Certificaciones</title>
 
 <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: transparent;
+        padding: 40px;
+    }
 
-body{
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    padding: 40px;
-}
+    /* CONTENEDOR PRINCIPAL */
+    .certificaciones {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        /* Ajusta este gap para separar o pegar más los logos entre sí */
+        gap: 10px; 
+        flex-wrap: wrap;
+    }
 
-/* CONTENEDOR */
-.certificaciones{
-    display: flex;
-    justify-content: center;   /* centra horizontal */
-    align-items: center;
-    gap: 60px;                 /* espacio entre logos */
-    flex-wrap: wrap;           /* baja en móvil */
-}
+    /* CADA BLOQUE */
+    .logo-box {
+        text-align: center;
+        /* REDUCIDO: Estaba en 200px. Al ser más estrecho, los logos se juntan */
+        width: 140px; 
+    }
 
-/* CADA BLOQUE */
-.logo-box{
-    text-align: center;
-}
+    /* CONTENEDOR DE IMAGEN */
+    .img-container {
+        height: 100px; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        /* REDUCIDO: Espacio entre logo y texto */
+        margin-bottom: 5px; 
+    }
 
-/* IMAGEN */
-.logo-box img{
-    width: 130px;              /* tamaño uniforme */
-    height: auto;
-    transition: transform 0.3s ease;
-}
+    .img-container img {
+        /* Ajustado para que el logo RUC no fuerce ancho extra */
+        max-width: 120px;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
 
-/* EFECTO HOVER OPCIONAL */
-.logo-box img:hover{
-    transform: scale(1.05);
-}
+    .img-container img:hover {
+        transform: scale(1.05);
+    }
 
-/* TEXTO DEBAJO */
-.logo-box p{
-    margin-top: 8px;
-    font-size: 14px;
-    color: #444;
-    font-weight: 500;
-}
-
+    .logo-box p {
+        margin: 0;
+        font-size: 13px;
+        color: #444;
+        font-weight: 600;
+        line-height: 1.2;
+    }
 </style>
 </head>
 
@@ -54,27 +66,37 @@ body{
 <div class="certificaciones">
 
     <div class="logo-box">
-        <img src="img/iso14001.png" alt="ISO 14001">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/14001.png" alt="ISO 14001">
+        </div>
         <p>GA 533</p>
     </div>
 
     <div class="logo-box">
-        <img src="img/iso45001.png" alt="ISO 45001">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/45001.png" alt="ISO 45001">
+        </div>
         <p>GS 1281</p>
     </div>
 
     <div class="logo-box">
-        <img src="img/sm.png" alt="SM Servitec">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/9001.png" alt="SM Servitec">
+        </div>
         <p>CSG-SM-202509-051</p>
     </div>
 
     <div class="logo-box">
-        <img src="img/sgs.png" alt="SGS">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/27001.png" alt="SGS">
+        </div>
         <p>025/00000056</p>
     </div>
 
     <div class="logo-box">
-        <img src="img/ruc.png" alt="RUC">
+        <div class="img-container">
+            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/RUC.png" alt="RUC">
+        </div>
         <p>DCA-0017634</p>
     </div>
 
