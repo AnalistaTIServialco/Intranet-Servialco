@@ -5,6 +5,17 @@
 <title>Certificaciones</title>
 
 <style>
+
+   .imagen-encabezado {
+    text-align: center;
+    margin-bottom: 0px;
+    }
+
+    .imagen-encabezado img {
+    max-width: 300px;
+    height: auto;
+    }
+
     body {
         font-family: Arial, sans-serif;
         background: transparent;
@@ -58,10 +69,57 @@
         font-weight: 600;
         line-height: 1.2;
     }
+
+        .redes-abajo{
+        margin-top: 20px;
+        text-align:center;
+    }
+
+    .redes-abajo a{
+        display:inline-flex;
+        justify-content:center;
+        align-items:center;
+        width:55px;
+        height:55px;
+        margin:0 15px;
+        border-radius:50%;
+        color:#fff;
+        font-size:22px;
+        text-decoration:none;
+        transition: transform 0.3s ease;
+    }
+
+    .facebook{
+        background:#1877F2;
+    }
+
+    .linkedin{
+        background:#0A66C2;
+    }
+
+    .redes-abajo a:hover{
+        transform:scale(1.1);
+    }   
+
+    
+
 </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
+
+    <div class="imagen-encabezado">
+        <a href="https://servialco.com/">
+        <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/Logo%20Servialco.png" alt="Logo Principal">
+        </a>
+    </div>
+
+    <div class="certificaciones">
+        </div>
+
 
 <div class="certificaciones">
 
@@ -111,6 +169,16 @@
     </div>
 
 </div>
+
+ <div class="redes-abajo">
+        <a href="https://www.facebook.com/people/Servialco-SAS/100085245294399/#" target="_blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://co.linkedin.com/company/servialco-sas" target="_blank" class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
 
 </body>
 </html>
