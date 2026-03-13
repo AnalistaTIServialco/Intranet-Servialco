@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursos</title>
+
+<style>
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    /* background:#f8f5f5;*/
+    background: transparent;
+    margin:0;
+    padding:40px;
+}
+
+h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.grid2 {
+    display: flex;          
+    justify-content: center;
+    gap: 40px;              
+    margin-bottom: 50px;    
+    flex-wrap: wrap;        
+}
+
+.grid2 .card {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: auto;            
+    max-width: 400px;       
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.grid2 .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); 
+}
+
+.grid2 .card:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 12px 20px rgba(0,0,0,0.2));
+}
+
+.grid2 .card img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    display:block;
+    text-align: center;
+}
+
+.grid2 .card-content{
+    display:none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1024px){
+.grid{
+    grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width:600px){
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.grid2{
+    grid-template-columns:1fr;
+}
+
+}
+
+/* TARJETAS CURSOS */
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.0);
+    transition:all 0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:18px;
+}
+
+.card h3{
+    margin:0 0 10px 0;
+    font-size:18px;
+}
+
+.tag{
+    display:inline-block;
+    font-size:12px;
+    padding:4px 8px;
+    background:#e5e9ff;
+    color:#3f51b5;
+    border-radius:6px;
+    margin-bottom:12px;
+}
+
+.meta{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    color:#666;
+    border-top:1px solid #eee;
+    padding-top:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BOTONES ODOO -->
+
+<div class="grid2">
+
+<div class="card">
+<a href="https://servialco.odoo.com/odoo" target="_blank">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/Odoo%20Produccion.png">
+</a>
+</div>
+
+<div class="card">
+<a href="https://servialco-test-2602-29093073.dev.odoo.com/odoo" target="_blank">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/Odoo%20Pruebas.png">
+</a>
+</div>
+
+<div class="card">
+<a href="https://servialco-test-2602-29093073.dev.odoo.com/odoo" target="_blank">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/Odoo%20Pruebas.png">
+</a>
+</div>
+
+</div>
+
+<h2>Cursos</h2>
+
+<div class="grid">
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/getting-started-15" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/PRIMEROS%20PASOS.png">
+<div class="card-content">
+<h3>PRIMEROS PASOS</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>5h 43m</span>
+<span>29 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/crm-16" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/CRM.jpg">
+<div class="card-content">
+<h3>CRM</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>2h 35m</span>
+<span>21 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/helpdesk-51" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/Helpdesk.jpg">
+<div class="card-content">
+<h3>HELPDESK</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>3h 23m</span>
+<span>24 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/inventory-24" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/INVENTARIO.jpg">
+<div class="card-content">
+<h3>INVENTARIOS</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>4h 25m</span>
+<span>35 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/project-timesheets-21" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/PROYECTOS%20Y%20HORAS.jpg">
+<div class="card-content">
+<h3>PROYECTOS Y HORAS</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>4h 45m</span>
+<span>18 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/human-resources-32" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/RECURSOS%20HUMANOS.jpg">
+<div class="card-content">
+<h3>RECURSOS HUMANOS</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>7h 39m</span>
+<span>60 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/sales-17" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/PREVENTA.jpg">
+<div class="card-content">
+<h3>VENTAS</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>3h 23m</span>
+<span>24 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/accounting-and-invoicing-19" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/Contabilidad.jpg">
+<div class="card-content">
+<h3>CONTABILIDAD</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>10h 4m</span>
+<span>40 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+<div class="card">
+<a href="https://www.odoo.com/es/slides/purchase-23" target="_blank" style="text-decoration:none;color:inherit;">
+<img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/6.)Odoo/COMPRAS.jpg">
+<div class="card-content">
+<h3>COMPRAS</h3>
+<span class="tag">Odoo Tutorials</span>
+<div class="meta">
+<span>1h 17m</span>
+<span>10 pasos</span>
+</div>
+</div>
+</a>
+</div>
+
+</div>
+
+</body>
+</html>
