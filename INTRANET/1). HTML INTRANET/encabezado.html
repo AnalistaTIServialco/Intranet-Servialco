@@ -1,47 +1,46 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-
 <style>
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:transparent;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html,body{
+width:100%;
+font-family: 'Arial Narrow';
 }
 
 .titulo-intranet{
-    text-align:center;
-    margin-top:40px;
+width:100%;
+text-align:center;
+padding:40px 20px;
 }
 
 .titulo-intranet h1{
-    font-size:48px;
-    font-weight:700;
-    letter-spacing:2px;
-    background: linear-gradient(90deg,#0a4d68,#088395,#05bfdb);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    margin:0;
+font-size:clamp(28px,6vw,48px);
+font-weight:700;
+letter-spacing:2px;
+background:linear-gradient(90deg,#0d6bb4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .titulo-intranet span{
-    display:block;
-    font-size:18px;
-    color:#555;
-    margin-top:8px;
-    letter-spacing:1px;
+display:block;
+margin-top:10px;
+font-size:clamp(14px,2vw,18px);
+color:#555;
 }
 
 </style>
-</head>
-
-<body>
 
 <div class="titulo-intranet">
-    <h1>INTRANET SERVIALCO</h1>
-    <span>Plataforma interna de gestión y colaboración</span>
-</div>
 
-</body>
-</html>
+<h1>INTRANET SERVIALCO</h1>
+
+<span>
+Plataforma interna de gestión y colaboración
+</span>
+
+</div>

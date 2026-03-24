@@ -18,7 +18,7 @@
         .contenedor-valores {
             display: flex;
             flex-direction: column;
-            gap: 20px; /* Espacio entre filas */
+            gap: 30px; /* Un poco más de espacio para que el zoom no choque */
             max-width: 1200px;
         }
 
@@ -26,20 +26,31 @@
         .fila {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Espacio entre cada tarjeta */
+            gap: 20px; 
             flex-wrap: wrap;
         }
 
         .tarjeta-img {
-            width: 150px; /* Ajusta el tamaño según tus archivos */
+            width: 150px;
             height: auto;
             display: block;
+            cursor: pointer;
+            
+            /* --- EFECTO DE ANIMACIÓN --- */
+            transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave de 0.3 segundos */
+        }
+
+        /* Efecto al pasar el mouse */
+        .tarjeta-img:hover {
+            transform: scale(1.15); /* Aumenta el tamaño un 15% */
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1)); /* Opcional: una pequeña sombra para dar profundidad */
+            z-index: 10; /* Asegura que la imagen crezca por encima de las demás */
         }
 
         /* Responsivo: En celulares se apilan */
         @media (max-width: 600px) {
             .tarjeta-img {
-                width: 45%;
+                width: 40%; /* Ajustado un poco menos para que el zoom no se salga de la pantalla */
             }
         }
     </style>
