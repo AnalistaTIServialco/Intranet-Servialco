@@ -5,53 +5,56 @@
 <title>Certificaciones</title>
 
 <style>
-
-   .imagen-encabezado {
-    text-align: center;
-    margin-bottom: 0px;
-    }
-
-    .imagen-encabezado img {
-    max-width: 300px;
-    height: auto;
-    }
-
     body {
         font-family: Arial, sans-serif;
         background: transparent;
         padding: 40px;
+        margin: 0;
     }
 
-    /* CONTENEDOR PRINCIPAL */
+    /* CONTENEDOR MAESTRO */
+    .contenedor-superior {
+        display: flex;
+        align-items: flex-start; 
+        justify-content: center; 
+        flex-wrap: wrap;
+        gap: 30px; 
+    }
+
+    .imagen-encabezado {
+        flex-shrink: 0;
+        margin-top: 45px; 
+    }
+
+    .imagen-encabezado img {
+        max-width: 260px; 
+        height: auto;
+    }
+
+    /* BLOQUE DE SELLOS */
     .certificaciones {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        /* Ajusta este gap para separar o pegar más los logos entre sí */
-        gap: 10px; 
+        gap: 5px; 
         flex-wrap: wrap;
     }
 
-    /* CADA BLOQUE */
     .logo-box {
         text-align: center;
-        /* REDUCIDO: Estaba en 200px. Al ser más estrecho, los logos se juntan */
-        width: 140px; 
+        width: 120px; 
     }
 
-    /* CONTENEDOR DE IMAGEN */
     .img-container {
-        height: 100px; 
+        height: 90px;
         display: flex;
         align-items: center; 
         justify-content: center; 
-        /* REDUCIDO: Espacio entre logo y texto */
-        margin-bottom: 5px; 
+        margin-bottom: 2px; 
     }
 
     .img-container img {
-        /* Ajustado para que el logo RUC no fuerce ancho extra */
-        max-width: 120px;
+        max-width: 100px;
         max-height: 100%;
         width: auto;
         height: auto;
@@ -64,119 +67,115 @@
 
     .logo-box p {
         margin: 0;
-        font-size: 13px;
+        font-size: 11px;
         color: #444;
         font-weight: 600;
-        line-height: 1.2;
+        line-height: 1.1;
     }
 
-        .redes-abajo{
-        margin-top: 20px;
-        text-align:center;
+    /* REDES SOCIALES */
+    .redes-abajo {
+        margin-top: -10px; /* Aquí ajustas la altura general */
+        text-align: center;
+        width: 100%; 
     }
 
-    .redes-abajo a{
-        display:inline-flex;
-        justify-content:center;
-        align-items:center;
-        width:55px;
-        height:55px;
-        margin:0 15px;
-        border-radius:50%;
-        color:#fff;
-        font-size:22px;
-        text-decoration:none;
+    .redes-abajo a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
         transition: transform 0.3s ease;
     }
 
-    .facebook{
-        background:#1877F2;
-    }
+    .facebook { background: #1877F2; }
+    .linkedin { background: #0A66C2; }
+    /* NUEVO: COLOR DE INSTAGRAM */
+    .instagram { background: #E4405F; } 
 
-    .linkedin{
-        background:#0A66C2;
-    }
-
-    .redes-abajo a:hover{
-        transform:scale(1.1);
-    }   
-
-    
-
+    .redes-abajo a:hover {
+        transform: scale(1.1);
+    } 
 </style>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <div class="imagen-encabezado">
-        <a href="https://servialco.com/">
-        <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/Logo%20Servialco.png" alt="Logo Principal">
-        </a>
+    <div class="contenedor-superior">
+        
+        <div class="imagen-encabezado">
+            <a href="https://servialco.com/">
+                <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/Logo%20Servialco.png" alt="Logo Principal">
+            </a>
+        </div>
+
+        <div class="certificaciones">
+            <div class="logo-box">
+                <a href="https://servialco.com/wp-content/uploads/2023/03/ISO-14001-2015-SERVIALCO.pdf" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/14001.png" alt="ISO 14001">
+                    </div>
+                    <p>GA 533</p>
+                </a>
+            </div>
+
+            <div class="logo-box">
+                <a href="https://servialco.com/wp-content/uploads/2023/03/ISO-45001-2018-SERVIALCO.pdf" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/45001.png" alt="ISO 45001">
+                    </div>
+                    <p>GS 1281</p>
+                </a>
+            </div>
+
+            <div class="logo-box">
+                <a href="https://servialco.com/wp-content/uploads/2026/01/CERTIFICADO-ISO-9001.pdf" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/9001.png" alt="SM Servitec">
+                    </div>
+                    <p>CSG-SM-202509-051</p>
+                </a>
+            </div>
+
+            <div class="logo-box">
+                <a href="https://servialco.com/wp-content/uploads/2025/05/SGS_ISO_IEC-27001_2022_COBOG_000056_ES.pdf" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/27001.png" alt="SGS">
+                    </div>
+                    <p>025/00000056</p>
+                </a>
+            </div>
+
+            <div class="logo-box">
+                <a href="https://servialco.com/wp-content/uploads/2025/04/HBT_CertificadoRUC.pdf" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/RUC.png" alt="RUC">
+                    </div>
+                    <p>DCA-0017634</p>
+                </a>
+            </div>
+        </div> 
     </div>
 
-    <div class="certificaciones">
-        </div>
-
-
-<div class="certificaciones">
-
-   <div class="logo-box">
-    <a href="https://servialco.com/wp-content/uploads/2023/03/ISO-14001-2015-SERVIALCO.pdf" target="_blank" style="text-decoration: none; color: inherit;">
-        <div class="img-container">
-            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/14001.png" alt="ISO 14001">
-        </div>
-        <p>GA 533</p>
-    </a>
-</div>
-
-    <div class="logo-box">
-    <a href="https://servialco.com/wp-content/uploads/2023/03/ISO-45001-2018-SERVIALCO.pdf" target="_blank" style="text-decoration: none; color: inherit;">
-        <div class="img-container">
-            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/45001.png" alt="ISO 45001">
-        </div>
-        <p>GS 1281</p>
-    </a>
-    </div>
-
-    <div class="logo-box">
-    <a href="https://servialco.com/wp-content/uploads/2026/01/CERTIFICADO-ISO-9001.pdf" target="_blank" style="text-decoration: none; color: inherit;">
-        <div class="img-container">
-            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/9001.png" alt="SM Servitec">
-        </div>
-        <p>CSG-SM-202509-051</p>
-    </a>
-    </div>
-
-    <div class="logo-box">
-    <a href="https://servialco.com/wp-content/uploads/2025/05/SGS_ISO_IEC-27001_2022_COBOG_000056_ES.pdf" target="_blank" style="text-decoration: none; color: inherit;">
-        <div class="img-container">
-            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/27001.png" alt="SGS">
-        </div>
-        <p>025/00000056</p>
-    </a>
-    </div>
-
-    <div class="logo-box">
-    <a href="https://servialco.com/wp-content/uploads/2025/04/HBT_CertificadoRUC.pdf" target="_blank" style="text-decoration: none; color: inherit;">
-        <div class="img-container">
-            <img src="https://raw.githubusercontent.com/AnalistaTIServialco/Intranet-Servialco/refs/heads/main/INTRANET/5.)%20CERTIFICACIONES/RUC.png" alt="RUC">
-        </div>
-        <p>DCA-0017634</p>
-    </a>
-    </div>
-
-</div>
-
- <div class="redes-abajo">
+    <div class="redes-abajo">
         <a href="https://www.facebook.com/people/Servialco-SAS/100085245294399/#" target="_blank" class="facebook">
             <i class="fab fa-facebook-f"></i>
         </a>
 
-        <a href="https://co.linkedin.com/company/servialco-sas" target="_blank" class="linkedin">
+        <a href="https://www.linkedin.com/in/servicios-de-ingenier%C3%ADa-aplicada-de-colombia-506a85338" target="_blank" class="linkedin">
             <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+        <a href="https://www.instagram.com/servialco_/" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i>
         </a>
     </div>
 
